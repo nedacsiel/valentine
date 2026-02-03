@@ -46,7 +46,7 @@ document.getElementById("yes").addEventListener("click", () => {
     const heart = document.createElement("div");
     heart.className = "heart";
     heart.textContent = "💖";
-
+    heart.style.fontSize = (4 + Math.random() * 48) + "px";
     heart.style.left = Math.random() * window.innerWidth + "px";
     heart.style.top = Math.random() * window.innerHeight + "px";
 
