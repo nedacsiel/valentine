@@ -42,7 +42,7 @@ const noButton = document.getElementById("no");
 
   animate();
 document.getElementById("yes").addEventListener("click", () => {
-  for (let i = 0; i < 25; i++) {
+  for (let i = 0; i < 95; i++) {
     const heart = document.createElement("div");
     heart.className = "heart";
     heart.textContent = "💖";
