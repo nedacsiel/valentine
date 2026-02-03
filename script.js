@@ -1,5 +1,6 @@
 <script>
-  const noButton = document.getElementById("no");
+  console.log("script is running!");
+const noButton = document.getElementById("no");
 
   let mouseX = 0;
   let mouseY = 0;
