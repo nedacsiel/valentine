@@ -1,4 +1,4 @@
-<script>
+
   console.log("script is running!");
 const noButton = document.getElementById("no");
 
@@ -56,4 +56,3 @@ document.getElementById("yes").addEventListener("click", () => {
   }
 });
 
-</script>
