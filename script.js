@@ -39,7 +39,6 @@ const noButton = document.getElementById("no");
 
     requestAnimationFrame(animate);
   }
-
   animate();
 document.getElementById("yes").addEventListener("click", () => {
   for (let i = 0; i < 95; i++) {
