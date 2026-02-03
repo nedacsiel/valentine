@@ -36,7 +36,7 @@
     #no {
       background-color: #555;
       color: white;
-      position: absolute;
+      position: fixed;
     }
 
     .buttons {
@@ -67,8 +67,8 @@
     const mouseY = e.clientY;
 
     const rect = noButton.getBoundingClientRect();
-    const buttonCenterX = rect.left + rect.width / 2;
-    const buttonCenterY = rect.top + rect.height / 2;
+    const buttonCenterX = rect.left;
+    const buttonCenterY = rect.top;
 
     const dx = buttonCenterX - mouseX;
     const dy = buttonCenterY - mouseY;
