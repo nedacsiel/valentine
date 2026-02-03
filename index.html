@@ -2,92 +2,16 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Valentine</title>
-
-  <style>
-    body {
-      height: 100vh;
-      margin: 0;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      background: #ffe6eb;
-      font-family: Arial, sans-serif;
-      overflow: hidden;
-    }
-
-    h1 {
-      margin-bottom: 30px;
-    }
-
-    button {
-      padding: 12px 24px;
-      font-size: 18px;
-      border-radius: 8px;
-      border: none;
-      cursor: pointer;
-    }
-
-    #yes {
-      background: #ff4d6d;
-      color: white;
-    }
-
-    #no {
-      background: #555;
-      color: white;
-      position: fixed;   /* IMPORTANT */
-      left: 55%;
-      top: 55%;
-      transition: left 0.06s linear, top 0.06s linear;
-    }
-  </style>
+  <title>Valentine 💘</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
   <h1>Will you be my Valentine? 💘</h1>
-  
-<div class="buttons">
-    <button id="yes" onclick="alert('Yay!! 💖')">Yes</button>
-    <button id="no">No</button>
-  </div>
 
-  <script>
-    const noButton = document.getElementById("no");
+  <button id="yes">Yes</button>
+  <button id="no">No</button>
 
-    let buttonX = window.innerWidth * 0.55;
-    let buttonY = window.innerHeight * 0.55;
-
-    document.addEventListener("mousemove", (e) => {
-      const mouseX = e.clientX;
-      const mouseY = e.clientY;
-
-      const rect = noButton.getBoundingClientRect();
-      const btnX = rect.left + rect.width / 2;
-      const btnY = rect.top + rect.height / 2;
-
-      const dx = btnX - mouseX;
-      const dy = btnY - mouseY;
-
-      const distance = Math.hypot(dx, dy);
-      if (distance < 1) return;
-
-      const safeDistance = 100;
-      const speed = 20;
-
-      if (distance < safeDistance) {
-        buttonX += (dx / distance) * speed;
-        buttonY += (dy / distance) * speed;
-
-        // Clamp to screen
-        buttonX = Math.max(0, Math.min(window.innerWidth - rect.width, buttonX));
-        buttonY = Math.max(0, Math.min(window.innerHeight - rect.height, buttonY));
-
-        noButton.style.left = buttonX + "px";
-        noButton.style.top = buttonY + "px";
-      }
-    });
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
