@@ -30,7 +30,7 @@ button {
 }
 .heart {
   position: fixed;
-  font-size: 24px;
+  font-size: 40px;
   color: #ff4d6d;
   animation: floatUp 2s ease-out forwards;
   pointer-events: none;
